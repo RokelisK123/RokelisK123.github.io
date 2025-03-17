@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="style.css">
+<title>Roko naujienos</title>
+<script src="script.js"></script>
+</head>
+
+<body class="container">
+
+    <div class="topnavbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img class="logo" src="6.png" alt="Roko naujienos logotipas">
+            </a>
+        </div>
+        <nav class="navukai">
+            <a class="active" href="index.html">Pradinis &#x1F3E0;</a>
+            <a href="Sportas.html">Sportas &#127936;</a>
+            <a href="Kultura.html">Kultūra &#x1F3AD;</a>
+            <a href="Mediateka.html">Mediateka &#x1F4F9;</a>
+            <a href="Politika.html">Politika &#x1F310;</a>
+            <a href="Kontaktai.html">Kontaktai &#x1F4E9;</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" 
+                   id="search-input" 
+                   placeholder="Ieškoti..."
+                   onkeyup="searchNews()">
+        </div>
+    </div>
+
+     <!-- gridai -->
+     
+    <div class="zinios-lietus">
+        <div class="column">
+            <img class="zinios-lietus1" src="download.jpg" alt="Lietus Pasvalyje" onclick="location.href='lietus.html'">
+            <p class="ziniu-prierasas">Lietuva |</p>
+            <p class="ziniu-perziuros">2000 &#128065;</p>
+            <p class="ziniu-tekstas" onclick="location.href='lietus.html'">
+                Ketvirtadienio naktį lietus nusiaubė Pasvalio rajoną</p>
+        </div>
+    </div>
+
+    <div class="zinios-policija">
+        <div class="column">
+            <img class="zinios-policija1" src="1.jpg" alt="Policijos reidas Vilniuje">
+            <p class="ziniu-prierasas">Lietuva |</p>
+            <p class="ziniu-perziuros">4213 &#128065;</p>
+            <p class="ziniu-tekstas">Ryte pareigūnai Vilniuje sulaikė du neblaivius vairuotojus</p>
+        </div>
+    </div>
+
+    <div class="zinios-koncertas">
+        <div class="column">
+            <img class="zinios-koncertas1" src="4.jpg" alt="Jessicos Shy koncertas">
+            <p class="ziniu-prierasas">Lietuva |</p>
+            <p class="ziniu-perziuros">6912 &#128065;</p>
+            <p class="ziniu-tekstas">Jessicos Shy koncerte netikėtas svečias: pristatė ir naują savo kūrinį</p>
+        </div>
+    </div>
+
+    <div class="zinios-medicina">
+        <div class="column">
+            <img class="zinios-medicina1" src="5.jpg" alt="COVID situacija JAV">
+            <p class="ziniu-prierasas">JAV |</p>
+            <p class="ziniu-perziuros">2132 &#128065;</p>
+            <p class="ziniu-tekstas">HHS: Šiltėjant orams - dar vienas COVID susirgimų šuolis</p>
+        </div>
+    </div>
+    
+    <button onclick="scrollToTop()" 
+            id="topBtn" 
+            class="scroll-top-btn">
+        Grįžti į viršų &#10548;
+    </button>
+
+</body>
+</html>

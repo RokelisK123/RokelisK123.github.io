@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="apie.css">
+<link rel="stylesheet" href="style.css">
+<title>Kontaktai - Roko naujienos</title>
+</head>
+
+<body class="container">
+
+  <div class="topnavbar">
+      <div class="logo-container">
+          <a href="index.html">
+              <img class="logo" src="6.png" alt="Roko naujienos logotipas">
+          </a>
+      </div>
+      <nav class="navukai">
+          <a href="index.html">Pradinis &#x1F3E0;</a>
+          <a href="Sportas.html">Sportas &#127936;</a>
+          <a href="Kultura.html">Kultūra &#x1F3AD;</a>
+          <a href="Mediateka.html">Mediateka &#x1F4F9;</a>
+          <a href="Politika.html">Politika &#x1F310;</a>
+          <a class="active" href="Kontaktai.html">Kontaktai &#x1F4E9;</a>
+      </nav>
+  </div>
+
+    <div class="container">
+        <div style="text-align:center">
+          <h1>Susisiekite su mumis!</h1>
+          <h2>Palikite mums žinutę ar atsiliepimą!</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="2.png" style="width:75%;" alt="Susisiekimo paveikslėlis">
+          </div>
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="fname">Vardas</label>
+              <input type="text" id="fname" name="firstname" placeholder="Jūsų vardas.." required>
+              
+              <label for="lname">Pavardė</label>
+              <input type="text" id="lname" name="lastname" placeholder="Jūsų pavardė.." required>
+              
+              <label for="country">Šalis</label>
+              <select id="country" name="country">
+                <option value="lietuva">Lietuva</option>
+                <option value="latvija">Latvija</option>
+                <option value="estija">Estija</option>
+              </select>
+              
+              <label for="subject">Žinutė</label>
+              <textarea id="subject" name="subject" placeholder="Parašykite žinutę.." style="height:170px;" required></textarea>
+              
+              <input type="submit" value="Pateikti">
+            </form>
+          </div>
+        </div>
+        
+        <button onclick="scrollToTop()" 
+                id="topBtn" 
+                class="scroll-top-btn">
+                Grįžti į viršų &#10548;
+        </button>
+    </div>
+
+</body>
+</html>
