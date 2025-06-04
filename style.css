@@ -6,7 +6,18 @@
     --text-color: #f8f9fa;
     --text-secondary: #adb5bd;
     --border-color: #2d2d2d;
+    --navbar-bg: rgba(18, 18, 18, 0.85);
     --transition: all 0.3s ease;
+}
+
+/* Light theme variables */
+body.light-theme {
+    --background-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+    --text-color: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --navbar-bg: rgba(255, 255, 255, 0.85);
 }
 
 .page-loader {
@@ -84,8 +95,8 @@ body > *:not(.page-loader):not(#particles-js) {
     animation: fadeIn 1s ease-in-out 2.5s forwards;
 }
 
-html {
-    scroll-behavior: smooth;
+html, body {
+    overflow-x: hidden;
 }
 
 body {
@@ -99,13 +110,22 @@ body {
 
 nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    margin: 20px;
+    top: 20px;
+    left: 20px;
+    right: auto;
+    margin: 0;
     z-index: 1000;
-    background-color: rgba(18, 18, 18, 0.8);
-    padding: 10px 20px;
-    border-radius: 10px;
+    background-color: var(--navbar-bg);
+    padding: 10px 24px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    width: auto;
+    min-width: 340px;
+    max-width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
 }
 
 nav ul {
@@ -114,6 +134,7 @@ nav ul {
     margin: 0;
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 nav ul li a {
@@ -131,6 +152,43 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    color: var(--primary-color);
+    transform: rotate(15deg);
+}
+
+.footer-info {
+    margin-top: 40px;
+    text-align: right;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+#clock {
+    position: static;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background: none;
+    margin: 0 0 0 24px;
+    pointer-events: none;
+    min-width: 70px;
+    text-align: right;
+}
+
+.copyright {
+    font-size: 0.8rem;
+}
 
 .section {
     position: relative;
@@ -181,6 +239,10 @@ h2 {
     color: var(--text-secondary);
 }
 
+.scroll-indicator a {
+    display: inline-block;
+    cursor: pointer;
+}
 
 .section-title {
     font-size: 2.5rem;

@@ -10,6 +10,7 @@
 </head>
 <body>
     <div id="particles-js"></div>
+    <div id="clock"></div>
     <div class="page-loader">
         <div class="loader-content">
             <div class="loader-circle"></div>
@@ -26,6 +27,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contacts">Contacts</a></li>
         </ul>
+        <div id="clock"></div>
     </nav>
 
     <section id="home" class="section">
@@ -33,7 +35,9 @@
             <h1>Hello. I'm Rokas.</h1>
             <h2>-and this is my portfolio website-</h2>
             <div class="scroll-indicator">
-                <i class="fas fa-chevron-down"></i>
+                <a href="#projects" aria-label="Scroll to Projects">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -131,12 +135,14 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm Rokas, and I'm passionate about problem-solving and innovation, with a strong academic
-                        background in artificial intelligence concepts and machine learning
-                        techniques. Skilled in programming languages such as Python, with
-                        practical experience in data analysis and model development gained
-                        through coursework and personal projects. Eager to apply these skills to
-                        contribute to impactful solutions in cutting-edge AI projects.</p>
+                    <p>
+                        Hello! I'm Rokas, and I am a fourth-year Artificial Intelligence Systems Programming student at Vilnius Tech.
+                        I'm very passionate about problem-solving and innovation, with a strong academic background in artificial intelligence
+                        concepts and machine learning techniques. I am skilled in programming languages such as Python,
+                        with practical experience in data analysis and model development gained through coursework and
+                        personal projects. I also enjoy working with websites from scratch and with WordPress,
+                         exploring other programming languages, and learning something new every day.
+                        I am eager to apply these skills to contribute to impactful solutions in cutting-edge AI projects.
                     <p>In my free time, I strive to build projects that not only look great but also have some kind of 
                         value and showcases my skills.
                     </p>
@@ -171,8 +177,12 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
+            <div class="footer-info">
+                <div class="copyright">© 2024 Rokas. All rights reserved.</div>
+            </div>
         </div>
     </section>
     <script src="particles-config.js"></script>
+    <script src="theme.js"></script>
 </body>
 </html>
