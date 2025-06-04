@@ -77,7 +77,9 @@
 }
 
 
-body > *:not(.page-loader) {
+body > *:not(.page-loader):not(#particles-js) {
+    position: relative;
+    z-index: 2;
     opacity: 0;
     animation: fadeIn 1s ease-in-out 2.5s forwards;
 }
@@ -101,6 +103,9 @@ nav {
     right: 0;
     margin: 20px;
     z-index: 1000;
+    background-color: rgba(18, 18, 18, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 nav ul {
@@ -128,6 +133,8 @@ nav ul li a:hover {
 
 
 .section {
+    position: relative;
+    z-index: 2;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -369,4 +376,14 @@ h2 {
     nav ul {
         justify-content: center;
     }
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--background-color);
 }
