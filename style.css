@@ -435,13 +435,58 @@ h2 {
     }
     
     nav {
-        position: relative;
-        margin: 20px auto;
-        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 8px 8px 8px 8px;
+        border-radius: 0 0 18px 18px;
+        width: 100vw;
+        min-width: 0;
+        max-width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 0;
     }
     
     nav ul {
-        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        width: auto;
+    }
+    nav ul li a {
+        padding: 6px 8px;
+        font-size: 0.95rem;
+        display: block;
+    }
+    #clock {
+        margin-left: 8px;
+        font-size: 1rem;
+        min-width: 60px;
+        text-align: right;
+        position: static;
+        color: var(--text-color);
+    }
+    #theme-toggle {
+        margin-left: 8px;
+    }
+    .skills ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .skills li {
+        padding: 8px;
+        font-size: 0.9rem;
+        text-align: center;
     }
 }
 
