@@ -10,7 +10,7 @@
     --transition: all 0.3s ease;
 }
 
-/* Light theme variables */
+/* sviesi tema */
 body.light-theme {
     --background-color: #f8f9fa;
     --card-bg-color: #ffffff;
@@ -95,8 +95,8 @@ body > *:not(.page-loader):not(#particles-js) {
     animation: fadeIn 1s ease-in-out 2.5s forwards;
 }
 
-html, body {
-    overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -120,11 +120,8 @@ nav {
     border-radius: 18px;
     backdrop-filter: blur(10px);
     width: auto;
-    min-width: 340px;
-    max-width: 90vw;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
     box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
 }
 
@@ -175,15 +172,17 @@ nav ul li a:hover {
 }
 
 #clock {
-    position: static;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: auto;
+    z-index: 1100;
     font-family: monospace;
     font-size: 1.2rem;
     color: var(--text-color);
     background: none;
-    margin: 0 0 0 24px;
+    margin: 0;
     pointer-events: none;
-    min-width: 70px;
-    text-align: right;
 }
 
 .copyright {
@@ -239,10 +238,6 @@ h2 {
     color: var(--text-secondary);
 }
 
-.scroll-indicator a {
-    display: inline-block;
-    cursor: pointer;
-}
 
 .section-title {
     font-size: 2.5rem;
