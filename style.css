@@ -95,7 +95,8 @@ body > *:not(.page-loader):not(#particles-js) {
     animation: fadeIn 1s ease-in-out 2.5s forwards;
 }
 
-html {
+html, body {
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -120,8 +121,11 @@ nav {
     border-radius: 18px;
     backdrop-filter: blur(10px);
     width: auto;
+    min-width: 340px;
+    max-width: 90vw;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
 }
 
@@ -172,17 +176,14 @@ nav ul li a:hover {
 }
 
 #clock {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    left: auto;
-    z-index: 1100;
     font-family: monospace;
     font-size: 1.2rem;
     color: var(--text-color);
     background: none;
-    margin: 0;
+    margin: 0 0 0 24px;
     pointer-events: none;
+    min-width: 70px;
+    text-align: right;
 }
 
 .copyright {
@@ -233,11 +234,20 @@ h2 {
     animation: bounce 2s infinite;
 }
 
-.scroll-indicator i {
-    font-size: 2rem;
+.scroll-indicator a {
+    display: inline-block;
+    cursor: pointer;
     color: var(--text-secondary);
+    transition: var(--transition);
 }
 
+.scroll-indicator a:hover {
+    color: var(--primary-color);
+}
+
+.scroll-indicator i {
+    font-size: 2rem;
+}
 
 .section-title {
     font-size: 2.5rem;

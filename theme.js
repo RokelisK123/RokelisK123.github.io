@@ -1,4 +1,4 @@
-// Theme switcher
+// theme switcheris
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.createElement('button');
     themeToggle.id = 'theme-toggle';
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Clock functionality
+// laikrodis
 function updateClock() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
@@ -26,6 +26,6 @@ function updateClock() {
     document.getElementById('clock').textContent = timeString;
 }
 
-// Update clock every second
+// updatinam clock
 setInterval(updateClock, 1000);
-updateClock(); // Initial call 
+updateClock(); 
